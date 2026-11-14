@@ -78,7 +78,9 @@ Catatan: *sb* adalah simpangan baku populasi (`np.std` dengan `ddof=0`) dari 3 u
      Pertanyaan pemandu: Polip seperti apa yang sering terlewat (kecil? datar? warna mirip dinding usus?)
      Apa yang sering dikira polip padahal bukan? Apakah augmentasi memperbaiki kasus sulit? -->
 
-✍️
+Kode warna: hijau = polip ditemukan dengan benar, merah = *false positive*, biru = *false negative*. Peta dibuat dari model ulangan pertama tiap skenario. Empat citra yang ditampilkan dipilih berdasarkan Dice model *Tanpa augmentasi*: dua paling sulit (baris 1 dan 2) dan dua paling mudah (baris 3 dan 4). Jadi gambar ini bukan sampel acak dari 200 citra uji.
+
+Pada dua baris atas, polip gagal ditemukan dengan baik. Pada baris 2, keempat skenario terlewat hampir total (Dice 0,00–0,06). Pada baris 1, *Tanpa augmentasi* dan *Hue* tidak menemukan polip sama sekali (Dice 0,00), sedangkan *Geser & perbesar* (0,33) dan *Kecerahan & kontras* (0,39) baru menemukan sebagian. Pada dua baris bawah, keempat skenario menemukan polip dengan baik (Dice 0,94–0,98). Selain terlewat, model juga salah menandai lipatan mukosa dan area oranye di dinding usus sebagai polip (merah). Polip yang gagal ditemukan berada di tepi bingkai, dan pada baris 2 warnanya mirip mukosa di sekitarnya. Polip yang berhasil ditemukan berada di dalam bingkai dengan kontras yang jelas. Dugaan ini belum bisa dipastikan karena hanya didasarkan pada empat citra.
 
 ## 6. Pembahasan & kesimpulan
 
@@ -91,7 +93,13 @@ Catatan: *sb* adalah simpangan baku populasi (`np.std` dengan `ddof=0`) dari 3 u
 
 <!-- Siapa mengerjakan apa. Penilaian proses kerja dilihat dari riwayat commit tiap anggota. -->
 
-✍️
+Berdasarkan riwayat commit:
+
+- **Jonathan Gilbert Ry:** mengganti `SKENARIO` di notebook, mengisi Bagian 2, menulis hipotesis skenario "Geser & perbesar", menjalankan eksperimen akhir di Google Colab (GPU T4, `CEPAT = False`), men-commit notebook dan folder `hasil/`, serta mengisi tabel Bagian 4.
+- **Wangga Firza Illahi Fasya:** pemilik repositori; menulis hipotesis skenario "Kecerahan & kontras".
+- **Rendi Prayoga:** menulis alasan klinis dan hipotesis skenario "Hue".
+
+<!-- Wangga dan Rendi: tambahkan atau koreksi bagian kalian sendiri lewat commit masing-masing. -->
 
 ## 8. Penggunaan AI
 
@@ -104,6 +112,9 @@ Catatan: *sb* adalah simpangan baku populasi (`np.std` dengan `ddof=0`) dari 3 u
 - Mengganti isi `SKENARIO` di notebook dengan ketiga skenario tersebut, lalu menjalankan notebook di Colab dalam mode cepat (`CEPAT = True`) untuk memastikan tidak ada *error*. Hasil mode cepat tidak dipakai di laporan ini.
 - Mengisi Bagian 2 dan nama file gambar contoh augmentasi di README.
 - Hipotesis skenario "Geser & perbesar" berasal dari draf Jonathan. Claude mengoreksi alasannya (manfaat augmentasi ini lebih mungkin datang dari variasi ukuran daripada letak polip, karena lapisan konvolusi pada U-Net relatif tidak bergantung pada posisi) dan merapikan bahasanya.
+- Mengoperasikan Google Colab di browser bawaan aplikasi desktop (setelah Jonathan masuk ke akun Google-nya): mengubah `CEPAT = False`, menjalankan seluruh notebook, mengunduh hasilnya, lalu menyalin notebook dan folder `hasil/` ke folder repo di laptop. Jonathan sendiri yang menjalankan `git add`, `commit`, dan `push`.
+- Menyusun tabel Bagian 4 dari `hasil/ringkasan.md`.
+- Memeriksa di notebook cara empat citra peta kesalahan dipilih, lalu membandingkan draf Bagian 5 dengan `peta_kesalahan.png`. Claude mengoreksi tiga klaim (lumen gelap, warna polip pada baris 1, dan jumlah skenario yang gagal pada baris 1) dan merapikan bahasanya. Pengamatan dan dugaan pada draf berasal dari Jonathan.
 
 **Wangga Firza Illahi Fasya:** memakai Claude (Anthropic) lewat halaman chat web (claude.ai), bukan lewat agen yang mengubah file repo. Semua perintah *git* dan semua perubahan pada README dijalankan dan diketik sendiri oleh Wangga dari laptopnya. Pemakaiannya:
 
