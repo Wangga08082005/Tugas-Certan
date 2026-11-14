@@ -98,7 +98,11 @@ Contoh augmentasi yang dicoba:
 - Mengisi Bagian 2 dan nama file gambar contoh augmentasi di README.
 - Hipotesis skenario "Geser & perbesar" berasal dari draf Jonathan. Claude mengoreksi alasannya (manfaat augmentasi ini lebih mungkin datang dari variasi ukuran daripada letak polip, karena lapisan konvolusi pada U-Net relatif tidak bergantung pada posisi) dan merapikan bahasanya.
 
-**Wangga Firza Illahi Fasya:** ✍️ (diisi sendiri oleh yang bersangkutan, tulis "Tidak memakai AI" jika memang tidak)
+**Wangga Firza Illahi Fasya:** memakai Claude (Anthropic) lewat halaman chat web (claude.ai), bukan lewat agen yang mengubah file repo. Semua perintah *git* dan semua perubahan pada README dijalankan dan diketik sendiri oleh Wangga dari laptopnya. Pemakaiannya:
+
+- Menjelaskan aturan tugas dan alur kerjanya.
+- Memandu pemasangan dan penggunaan Git, GitHub CLI, dan Google Colab, serta menjelaskan pesan *error* di terminal.
+- Untuk hipotesis skenario "Kecerahan & kontras": mengajukan pertanyaan pemandu, mengoreksi konsep (augmentasi ini menambah variasi di data latih, bukan menyeragamkan citra), dan merapikan bahasa jawaban Wangga. Alasan klinis dan arah hipotesis (Dice sama) berasal dari jawaban dan pilihan Wangga sendiri.
 
 **Rendi Prayoga:** ✍️ (diisi sendiri oleh yang bersangkutan, tulis "Tidak memakai AI" jika memang tidak)
 
