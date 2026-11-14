@@ -17,7 +17,7 @@
 
 | Nama | NIM | Username GitHub | Kontribusi utama |
 |---|---|---|---|
-| Jonathan Gilbert Ry | 123430063 | jonathan123430063 | ✍️ |
+| Jonathan Gilbert Ry | 123430063 | jonathan123430063 | Menjalankan eksperimen akhir di Colab, mengganti skenario augmentasi di notebook, dan menulis Bagian 2, 4, 5, dan 6 README |
 | Wangga Firza Illahi Fasya | 123430029 | Wangga08082005 | ✍️ |
 | Rendi Prayoga | 123430127 | rendi123430127 | ✍️ |
 
@@ -142,4 +142,3 @@ Atau buka notebook di Google Colab (Runtime → Change runtime type → T4 GPU).
 
 - Jha, D., dkk. (2020). Kvasir-SEG: A Segmented Polyp Dataset. *MultiMedia Modeling (MMM 2020)*, 451–462.
 - Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. *MICCAI*. arXiv:1505.04597.
-- ✍️ tambahkan referensi lain yang kalian pakai
