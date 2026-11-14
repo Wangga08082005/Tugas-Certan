@@ -91,9 +91,8 @@ Skenario *Geser & perbesar* unggul atas *Tanpa augmentasi* pada ketiga ulangan (
 
 Hipotesis skenario *Geser & perbesar* (naik sedikit) sejalan dengan data: Dice naik 0,029 dengan arah yang sama pada tiga ulangan. Namun dengan n = 3, hipotesis ini baru didukung secara arah, bukan secara statistik. Untuk pertanyaan utama, dari tiga augmentasi hanya *Geser & perbesar* yang menunjukkan kecenderungan membantu, mungkin karena menambah variasi ukuran dan posisi polip yang dilihat model. Namun geser dan zoom digabung dalam satu skenario, sehingga efek ukuran tidak bisa dipisahkan dari efek posisi. Keterbatasan lain: hanya 3 ulangan, 200 citra latih, model mini, dan peta kesalahan hanya memuat 4 citra dari ujung tersulit dan termudah.
 
-<!-- Wangga dan Rendi: Hipotesis kami untuk Hue adalah naik, tetapi hasilnya 0,571 vs 0,575 (selisih 0,004, jauh di bawah simpangan baku 0,029), sehingga pengaruhnya tidak terlihat. Dugaannya, pergeseran hue mengubah warna seluruh citra sekaligus, sehingga perbedaan warna antara polip dan mukosa tetap sama dan tidak ada petunjuk baru yang bisa dipakai model. -->
+Hipotesis kami untuk Hue adalah naik, tetapi hasilnya 0,571 vs 0,575 (selisih 0,004, jauh di bawah simpangan baku 0,029), sehingga pengaruhnya tidak terlihat. Dugaannya, pergeseran hue mengubah warna seluruh citra sekaligus, sehingga perbedaan warna antara polip dan mukosa tetap sama dan tidak ada petunjuk baru yang bisa dipakai model.
 
-<!-- Wangga: . -->
 
 ## 7. Pembagian kerja
 
