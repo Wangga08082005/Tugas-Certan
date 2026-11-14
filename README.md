@@ -103,8 +103,8 @@ Berdasarkan riwayat commit:
 - **Jonathan Gilbert Ry:** mengganti `SKENARIO` di notebook, mengisi Bagian 2, menulis hipotesis skenario "Geser & perbesar", menjalankan eksperimen akhir di Google Colab (GPU T4, `CEPAT = False`), men-commit notebook dan folder `hasil/`, serta mengisi tabel Bagian 4.
 - **Wangga Firza Illahi Fasya:** pemilik repositori; menulis hipotesis skenario "Kecerahan & kontras".
 - **Rendi Prayoga:** menulis alasan klinis dan hipotesis skenario "Hue".
+Catatan: commit Rendi 88bb670, 2ce1fb1, dan cf0f72f tidak tertaut ke akun GitHub rendi123430127 karena email git saat itu salah ketik (kurang satu angka). Penulisnya tetap Rendi Prayoga.
 
-<!-- Wangga dan Rendi: tambahkan atau koreksi bagian kalian sendiri lewat commit masing-masing. -->
 
 ## 8. Penggunaan AI
 
