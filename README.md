@@ -87,7 +87,11 @@ Pada dua baris atas, polip gagal ditemukan dengan baik. Pada baris 2, keempat sk
 <!-- Bandingkan hasil dengan hipotesis di Bagian 3. Hipotesis yang ternyata salah tetap bernilai,
      asalkan dijelaskan kenapa. Perbedaan kecil (lebih kecil dari simpangan baku) belum tentu berarti. -->
 
-✍️
+Skenario *Geser & perbesar* unggul atas *Tanpa augmentasi* pada ketiga ulangan (Dice 0,604 vs 0,575). Selisihnya 0,029 lebih besar daripada simpangan baku kedua skenario (0,007 dan 0,020), jadi arahnya konsisten dan melebihi variasi antar ulangan, tetapi dengan hanya 3 ulangan hal ini belum bisa dipastikan secara statistik. *Hue* tidak membantu (0,571 vs 0,575; selisih 0,004) karena selisihnya jauh di bawah simpangan baku 0,029. Dugaannya, bentuk dan tekstur polip lebih berperan daripada warna, tetapi hal ini tidak diuji dalam eksperimen ini. *Kecerahan & kontras* belum bisa disimpulkan merusak. Rata-ratanya memang paling rendah (0,484), tetapi ketiga ulangannya (0,615; 0,347; 0,488) tersebar dengan simpangan baku 0,109, sehingga yang terbukti hanya ketidakstabilannya.
+
+Hipotesis skenario *Geser & perbesar* (naik sedikit) sejalan dengan data: Dice naik 0,029 dengan arah yang sama pada tiga ulangan. Namun dengan n = 3, hipotesis ini baru didukung secara arah, bukan secara statistik. Untuk pertanyaan utama, dari tiga augmentasi hanya *Geser & perbesar* yang menunjukkan kecenderungan membantu, mungkin karena menambah variasi ukuran dan posisi polip yang dilihat model. Namun geser dan zoom digabung dalam satu skenario, sehingga efek ukuran tidak bisa dipisahkan dari efek posisi. Keterbatasan lain: hanya 3 ulangan, 200 citra latih, model mini, dan peta kesalahan hanya memuat 4 citra dari ujung tersulit dan termudah.
+
+<!-- Wangga dan Rendi: tambahkan satu atau dua kalimat tentang hipotesis skenario kalian (Bagian 3) dibandingkan dengan hasilnya. -->
 
 ## 7. Pembagian kerja
 
@@ -115,6 +119,7 @@ Berdasarkan riwayat commit:
 - Mengoperasikan Google Colab di browser bawaan aplikasi desktop (setelah Jonathan masuk ke akun Google-nya): mengubah `CEPAT = False`, menjalankan seluruh notebook, mengunduh hasilnya, lalu menyalin notebook dan folder `hasil/` ke folder repo di laptop. Jonathan sendiri yang menjalankan `git add`, `commit`, dan `push`.
 - Menyusun tabel Bagian 4 dari `hasil/ringkasan.md`.
 - Memeriksa di notebook cara empat citra peta kesalahan dipilih, lalu membandingkan draf Bagian 5 dengan `peta_kesalahan.png`. Claude mengoreksi tiga klaim (lumen gelap, warna polip pada baris 1, dan jumlah skenario yang gagal pada baris 1) dan merapikan bahasanya. Pengamatan dan dugaan pada draf berasal dari Jonathan.
+- Untuk Bagian 6: Claude membuat kerangka enam poin lewat pertanyaan berpilihan, dan Jonathan memilih jawabannya. Jonathan lalu menulis paragrafnya sendiri dari kerangka itu. Claude mengoreksi satu kesalahan angka (simpangan baku yang dibandingkan dengan selisih Dice *Geser & perbesar*) dan merapikan bahasanya.
 
 **Wangga Firza Illahi Fasya:** memakai Claude (Anthropic) lewat halaman chat web (claude.ai), bukan lewat agen yang mengubah file repo. Semua perintah *git* dan semua perubahan pada README dijalankan dan diketik sendiri oleh Wangga dari laptopnya. Pemakaiannya:
 
