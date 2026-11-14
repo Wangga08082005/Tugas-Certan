@@ -19,7 +19,7 @@
 |---|---|---|---|
 | Jonathan Gilbert Ry | 123430063 | jonathan123430063 | ✍️ |
 | Wangga Firza Illahi Fasya | 123430029 | Wangga08082005 | ✍️ |
-| ✍️ | ✍️ | ✍️ | ✍️ |
+| Rendi Prayoga | 123430127 | rendi123430127 | ✍️ |
 
 ## 1. Pertanyaan
 
@@ -46,7 +46,7 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 | Tanpa augmentasi | — | Pembanding | — |
 | Geser & perbesar | `v2.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.8, 1.2))` | Polip bisa tampil di posisi dan ukuran yang berbeda pada foto, tergantung jarak dan sudut kamera. Citra dan *mask* digeser dan diperbesar dengan cara yang sama, jadi polip tetap pas dengan labelnya. | Dice naik sedikit dibanding "Tanpa augmentasi". Dengan hanya 200 citra latih, model mudah *overfitting*. Variasi ukuran dan posisi membuat model belajar bentuk polip, bukan ukuran atau letak tertentu. Selisih dianggap bermakna jika lebih besar dari simpangan baku antar ulangan. |
 | Kecerahan & kontras | `v2.ColorJitter(brightness=0.3, contrast=0.3)` | Kecerahan dan kontras foto kolonoskopi berbeda-beda karena kondisi pengambilan foto tidak sama, misalnya intensitas cahaya, jarak kamera, dan jenis kamera. Jika data latih kurang bervariasi, model lebih sering salah pada foto yang kecerahan atau kontrasnya berbeda dari data latihnya. | Dice sama dibanding "Tanpa augmentasi" (selisih lebih kecil dari simpangan baku antar ulangan), karena variasi kecerahan dan kontras di 200 citra latih sudah cukup banyak sehingga tambahan dari augmentasi ini tidak banyak mengubah apa yang dipelajari model. |
-
+| Hue | v2.ColorJitter(hue=0.1) | Warna foto kolonoskopi bisa berbeda antar alat dan antar pemeriksaan karena perbedaan keseimbangan putih (white balance), pemrosesan warna kamera, dan warna sumber cahaya. Pada augmentasi ini rona warna (hue) citra digeser sampai ±0,1 dari lingkaran warna, sedangkan mask tidak diubah karena augmentasi warna tidak mengubah posisi, bentuk, maupun batas polip. | Dice naik dibanding "Tanpa augmentasi", karena variasi warna membantu model mempelajari karakteristik polip pada kondisi warna yang berbeda, sehingga lebih mampu mengenali polip pada citra yang bervariasi. Pergeseran ±0,1 relatif kecil, sehingga karakteristik utama polip, yaitu bentuk, tekstur, batas area, dan perbedaannya dengan jaringan di sekitarnya, diharapkan tetap dapat dikenali model. |
 Contoh augmentasi yang dicoba:
 
 ![Contoh augmentasi: geser & perbesar](hasil/augmentasi_geser_dan_perbesar.png)
@@ -104,7 +104,7 @@ Contoh augmentasi yang dicoba:
 - Memandu pemasangan dan penggunaan Git, GitHub CLI, dan Google Colab, serta menjelaskan pesan *error* di terminal.
 - Untuk hipotesis skenario "Kecerahan & kontras": mengajukan pertanyaan pemandu, mengoreksi konsep (augmentasi ini menambah variasi di data latih, bukan menyeragamkan citra), dan merapikan bahasa jawaban Wangga. Alasan klinis dan arah hipotesis (Dice sama) berasal dari jawaban dan pilihan Wangga sendiri.
 
-**Rendi Prayoga:** ✍️ (diisi sendiri oleh yang bersangkutan, tulis "Tidak memakai AI" jika memang tidak)
+**Rendi Prayoga:** memakai Claude (Anthropic) lewat aplikasi desktop Claude. Pemakaiannya: memandu langkah git (memasang git, clone, commit, push), memeriksa konsep alasan klinis dan hipotesis skenario "Hue", dan merapikan bahasanya. Isi hipotesis berasal dari jawaban Rendi sendiri, sedangkan Claude mengoreksi alasan klinis (menyebut variasi yang tepat, yaitu white balance, bukan pencahayaan) dan merapikan kalimat.
 
 ## Cara menjalankan ulang
 
