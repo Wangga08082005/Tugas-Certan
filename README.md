@@ -30,9 +30,9 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 <!-- Isi dari Bagian 2 notebook. Pastikan CEPAT = False untuk hasil akhir. -->
 
 - Dataset: Kvasir-SEG (1000 citra kolonoskopi + mask polip), diperkecil ke 128 × 128 piksel.
-- Data uji: 200 citra (tetap). Data latih: 200 citra per ulangan (dipilih dari 800 citra sisa).
-- Model: U-Net mini (±0,5 juta parameter), 40 epoch, 3 ulangan per skenario.
-- Dijalankan di: Google Colab (GPU T4).
+- Data uji: 200 citra (tetap). Data latih: ✍️ citra per ulangan.
+- Model: U-Net mini (±0,5 juta parameter), ✍️ epoch, ✍️ ulangan per skenario.
+- Dijalankan di: ✍️ (misal: Google Colab T4 / laptop CPU / Mac M1).
 
 ![Contoh data](hasil/contoh_data.png)
 
@@ -49,11 +49,8 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 
 Contoh augmentasi yang dicoba:
 
-![Contoh augmentasi: geser & perbesar](hasil/augmentasi_geser_dan_perbesar.png)
-
-![Contoh augmentasi: kecerahan & kontras](hasil/augmentasi_kecerahan_dan_kontras.png)
-
-![Contoh augmentasi: hue](hasil/augmentasi_hue.png)
+![Contoh augmentasi](hasil/augmentasi_flip.png)
+<!-- Ganti nama file sesuai skenario kalian (lihat isi folder hasil/). -->
 
 ## 4. Hasil
 
@@ -88,11 +85,19 @@ Contoh augmentasi yang dicoba:
 
 ## 8. Penggunaan AI
 
-<!-- Wajib diisi, walau tidak memakai AI (tulis "Tidak memakai AI").
-     Contoh: "Claude Code (CLI) untuk menulis skenario augmentasi dan memperbaiki error di Bagian 4.
-     Draf Bagian 6 ditulis sendiri, lalu dirapikan bahasanya dengan bantuan AI." -->
+<!-- Bagian ini ditulis berdasarkan pemakaian sampai sebelum eksperimen akhir. Perbarui setelah eksperimen akhir dan Bagian 4-7 selesai. -->
 
-✍️
+**Jonathan Gilbert Ry** memakai Claude (Anthropic) lewat aplikasi desktop Claude yang dapat mengubah file repo dan membuka Google Colab di browser. Pemakaiannya:
+
+- Memandu langkah *git* (membuat `.gitignore`, *clone*, *commit*, *push*). Semua perintah *git* dijalankan sendiri oleh Jonathan dari laptopnya.
+- Mengusulkan tiga skenario augmentasi (geser & perbesar, kecerahan & kontras, *hue*) dan pembagiannya antaranggota. Kelompok yang menentukan pilihan akhirnya.
+- Mengganti isi `SKENARIO` di notebook dengan ketiga skenario tersebut, lalu menjalankan notebook di Colab dalam mode cepat (`CEPAT = True`) untuk memastikan tidak ada *error*. Hasil mode cepat tidak dipakai di laporan ini.
+- Mengisi Bagian 2 dan nama file gambar contoh augmentasi di README.
+- Hipotesis skenario "Geser & perbesar" berasal dari draf Jonathan. Claude mengoreksi alasannya (manfaat augmentasi ini lebih mungkin datang dari variasi ukuran daripada letak polip, karena lapisan konvolusi pada U-Net relatif tidak bergantung pada posisi) dan merapikan bahasanya.
+
+**Wangga Firza Illahi Fasya:** ✍️ (diisi sendiri oleh yang bersangkutan, tulis "Tidak memakai AI" jika memang tidak)
+
+**Rendi Prayoga:** ✍️ (diisi sendiri oleh yang bersangkutan, tulis "Tidak memakai AI" jika memang tidak)
 
 ## Cara menjalankan ulang
 
