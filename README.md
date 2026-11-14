@@ -30,9 +30,9 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 <!-- Isi dari Bagian 2 notebook. Pastikan CEPAT = False untuk hasil akhir. -->
 
 - Dataset: Kvasir-SEG (1000 citra kolonoskopi + mask polip), diperkecil ke 128 × 128 piksel.
-- Data uji: 200 citra (tetap). Data latih: ✍️ citra per ulangan.
-- Model: U-Net mini (±0,5 juta parameter), ✍️ epoch, ✍️ ulangan per skenario.
-- Dijalankan di: ✍️ (misal: Google Colab T4 / laptop CPU / Mac M1).
+- Data uji: 200 citra (tetap). Data latih: 200 citra per ulangan (dipilih dari 800 citra sisa).
+- Model: U-Net mini (±0,5 juta parameter), 40 epoch, 3 ulangan per skenario.
+- Dijalankan di: Google Colab (GPU T4).
 
 ![Contoh data](hasil/contoh_data.png)
 
@@ -49,8 +49,11 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 
 Contoh augmentasi yang dicoba:
 
-![Contoh augmentasi](hasil/augmentasi_flip.png)
-<!-- Ganti nama file sesuai skenario kalian (lihat isi folder hasil/). -->
+![Contoh augmentasi: geser & perbesar](hasil/augmentasi_geser_dan_perbesar.png)
+
+![Contoh augmentasi: kecerahan & kontras](hasil/augmentasi_kecerahan_dan_kontras.png)
+
+![Contoh augmentasi: hue](hasil/augmentasi_hue.png)
 
 ## 4. Hasil
 
