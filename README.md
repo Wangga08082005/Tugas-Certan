@@ -19,7 +19,7 @@
 |---|---|---|---|
 | Jonathan Gilbert Ry | 123430063 | jonathan123430063 | Menjalankan eksperimen akhir di Colab, mengganti skenario augmentasi di notebook, dan menulis Bagian 2, 4, 5, dan 6 README |
 | Wangga Firza Illahi Fasya | 123430029 | Wangga08082005 | ✍️ |
-| Rendi Prayoga | 123430127 | rendi123430127 | ✍️ |
+| Rendi Prayoga | 123430127 | rendi123430127 | Menulis alasan klinis dan hipotesis skenario Hue serta membahas hasilnya di Bagian 6	 |
 
 ## 1. Pertanyaan
 
@@ -91,7 +91,9 @@ Skenario *Geser & perbesar* unggul atas *Tanpa augmentasi* pada ketiga ulangan (
 
 Hipotesis skenario *Geser & perbesar* (naik sedikit) sejalan dengan data: Dice naik 0,029 dengan arah yang sama pada tiga ulangan. Namun dengan n = 3, hipotesis ini baru didukung secara arah, bukan secara statistik. Untuk pertanyaan utama, dari tiga augmentasi hanya *Geser & perbesar* yang menunjukkan kecenderungan membantu, mungkin karena menambah variasi ukuran dan posisi polip yang dilihat model. Namun geser dan zoom digabung dalam satu skenario, sehingga efek ukuran tidak bisa dipisahkan dari efek posisi. Keterbatasan lain: hanya 3 ulangan, 200 citra latih, model mini, dan peta kesalahan hanya memuat 4 citra dari ujung tersulit dan termudah.
 
-<!-- Wangga dan Rendi: tambahkan satu atau dua kalimat tentang hipotesis skenario kalian (Bagian 3) dibandingkan dengan hasilnya. -->
+<!-- Wangga dan Rendi: Hipotesis kami untuk Hue adalah naik, tetapi hasilnya 0,571 vs 0,575 (selisih 0,004, jauh di bawah simpangan baku 0,029), sehingga pengaruhnya tidak terlihat. Dugaannya, pergeseran hue mengubah warna seluruh citra sekaligus, sehingga perbedaan warna antara polip dan mukosa tetap sama dan tidak ada petunjuk baru yang bisa dipakai model. -->
+
+<!-- Wangga: . -->
 
 ## 7. Pembagian kerja
 
@@ -128,6 +130,7 @@ Berdasarkan riwayat commit:
 - Untuk hipotesis skenario "Kecerahan & kontras": mengajukan pertanyaan pemandu, mengoreksi konsep (augmentasi ini menambah variasi di data latih, bukan menyeragamkan citra), dan merapikan bahasa jawaban Wangga. Alasan klinis dan arah hipotesis (Dice sama) berasal dari jawaban dan pilihan Wangga sendiri.
 
 **Rendi Prayoga:** memakai Claude (Anthropic) lewat aplikasi desktop Claude. Pemakaiannya: memandu langkah git (memasang git, clone, commit, push), memeriksa konsep alasan klinis dan hipotesis skenario "Hue", dan merapikan bahasanya. Isi hipotesis berasal dari jawaban Rendi sendiri, sedangkan Claude mengoreksi alasan klinis (menyebut variasi yang tepat, yaitu white balance, bukan pencahayaan) dan merapikan kalimat.
+Untuk Bagian 6, draf dugaan tentang Hue dikirim lewat Jonathan ke Claude, yang mengoreksi alasannya (pergeseran hue mengubah warna seluruh citra sekaligus) dan merapikan bahasanya. Dugaan awalnya berasal dari Rendi.
 
 ## Cara menjalankan ulang
 
