@@ -112,17 +112,12 @@ Catatan: commit Rendi 88bb670, 2ce1fb1, dan cf0f72f tidak tertaut ke akun GitHub
 
 <!-- Bagian ini ditulis berdasarkan pemakaian sampai sebelum eksperimen akhir. Perbarui setelah eksperimen akhir dan Bagian 4-7 selesai. -->
 
-**Jonathan Gilbert Ry** memakai Claude (Anthropic) lewat aplikasi desktop Claude yang dapat mengubah file repo dan membuka Google Colab di browser. Pemakaiannya:
+**Jonathan Gilbert Ry** memakai Claude (Anthropic) lewat aplikasi desktop Claude yang dapat mengubah file repo dan mengoperasikan Google Colab di browser. Pemakaiannya:
 
-- Memandu langkah *git* (membuat `.gitignore`, *clone*, *commit*, *push*). Semua perintah *git* dijalankan sendiri oleh Jonathan dari laptopnya.
-- Mengusulkan tiga skenario augmentasi (geser & perbesar, kecerahan & kontras, *hue*) dan pembagiannya antaranggota. Kelompok yang menentukan pilihan akhirnya.
-- Mengganti isi `SKENARIO` di notebook dengan ketiga skenario tersebut, lalu menjalankan notebook di Colab dalam mode cepat (`CEPAT = True`) untuk memastikan tidak ada *error*. Hasil mode cepat tidak dipakai di laporan ini.
-- Mengisi Bagian 2 dan nama file gambar contoh augmentasi di README.
-- Hipotesis skenario "Geser & perbesar" berasal dari draf Jonathan. Claude mengoreksi alasannya (manfaat augmentasi ini lebih mungkin datang dari variasi ukuran daripada letak polip, karena lapisan konvolusi pada U-Net relatif tidak bergantung pada posisi) dan merapikan bahasanya.
-- Mengoperasikan Google Colab di browser bawaan aplikasi desktop (setelah Jonathan masuk ke akun Google-nya): mengubah `CEPAT = False`, menjalankan seluruh notebook, mengunduh hasilnya, lalu menyalin notebook dan folder `hasil/` ke folder repo di laptop. Jonathan sendiri yang menjalankan `git add`, `commit`, dan `push`.
-- Menyusun tabel Bagian 4 dari `hasil/ringkasan.md`.
-- Memeriksa di notebook cara empat citra peta kesalahan dipilih, lalu membandingkan draf Bagian 5 dengan `peta_kesalahan.png`. Claude mengoreksi tiga klaim (lumen gelap, warna polip pada baris 1, dan jumlah skenario yang gagal pada baris 1) dan merapikan bahasanya. Pengamatan dan dugaan pada draf berasal dari Jonathan.
-- Untuk Bagian 6: Claude membuat kerangka enam poin lewat pertanyaan berpilihan, dan Jonathan memilih jawabannya. Jonathan lalu menulis paragrafnya sendiri dari kerangka itu. Claude mengoreksi satu kesalahan angka (simpangan baku yang dibandingkan dengan selisih Dice *Geser & perbesar*) dan merapikan bahasanya.
+- *Git:* memandu langkah *git* (`.gitignore`, *clone*, *commit*, *push*). Semua perintah *git* dijalankan sendiri oleh Jonathan dari laptopnya.
+- *Eksperimen:* mengusulkan tiga skenario augmentasi dan pembagiannya antaranggota (kelompok yang menentukan pilihan akhirnya), mengganti isi `SKENARIO` di notebook, menguji mode cepat (`CEPAT = True`, hasilnya tidak dipakai di laporan), lalu menjalankan eksperimen akhir di Colab (`CEPAT = False`) dan menyalin notebook serta folder `hasil/` ke folder repo di laptop.
+- *README:* mengisi Bagian 2 dan nama gambar contoh augmentasi, menyusun tabel Bagian 4 dari `hasil/ringkasan.md`, menyusun Bagian 7 dari riwayat commit dan membantu menuliskan kalimat "Kontribusi utama" Jonathan (isinya diperiksa dan disetujui Jonathan), serta menulis paragraf pembuka Bagian 5 (kode warna dan cara empat citra dipilih) setelah memeriksa kode notebook.
+- *Koreksi dan perapian bahasa:* hipotesis skenario "Geser & perbesar" berasal dari draf Jonathan, dan Claude mengoreksi alasannya (manfaat augmentasi ini lebih mungkin datang dari variasi ukuran daripada letak polip, karena lapisan konvolusi pada U-Net relatif tidak bergantung pada posisi). Pada draf Bagian 5, Claude mengoreksi tiga klaim (lumen gelap, warna polip pada baris 1, dan jumlah skenario yang gagal pada baris 1). Untuk Bagian 6, Claude membuat kerangka enam poin lewat pertanyaan berpilihan, lalu Jonathan menulis paragrafnya sendiri; Claude mengoreksi satu kesalahan angka (simpangan baku yang dibandingkan dengan selisih Dice "Geser & perbesar") dan merapikan bahasanya. Pengamatan, dugaan, dan kesimpulan berasal dari Jonathan.
 
 **Wangga Firza Illahi Fasya:** memakai Claude (Anthropic) lewat halaman chat web (claude.ai), bukan lewat agen yang mengubah file repo. Semua perintah *git* dan semua perubahan pada README dijalankan dan diketik sendiri oleh Wangga dari laptopnya. Pemakaiannya:
 
