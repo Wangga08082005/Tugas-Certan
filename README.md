@@ -18,7 +18,7 @@
 | Nama | NIM | Username GitHub | Kontribusi utama |
 |---|---|---|---|
 | Jonathan Gilbert Ry | 123430063 | jonathan123430063 | Menjalankan eksperimen akhir di Colab, mengganti skenario augmentasi di notebook, dan menulis Bagian 2, 4, 5, dan 6 README |
-| Wangga Firza Illahi Fasya | 123430029 | Wangga08082005 | ✍️ |
+| Wangga Firza Illahi Fasya | 123430029 | Wangga08082005 | Ketua kelompok dan pemilik repositori, menulis alasan klinis dan hipotesis skenario Kecerahan & kontras serta membahas hasilnya di Bagian 6 |
 | Rendi Prayoga | 123430127 | rendi123430127 | Menulis alasan klinis dan hipotesis skenario Hue serta membahas hasilnya di Bagian 6	 |
 
 ## 1. Pertanyaan
@@ -91,6 +91,8 @@ Skenario *Geser & perbesar* unggul atas *Tanpa augmentasi* pada ketiga ulangan (
 
 Hipotesis skenario *Geser & perbesar* (naik sedikit) sejalan dengan data: Dice naik 0,029 dengan arah yang sama pada tiga ulangan. Namun dengan n = 3, hipotesis ini baru didukung secara arah, bukan secara statistik. Untuk pertanyaan utama, dari tiga augmentasi hanya *Geser & perbesar* yang menunjukkan kecenderungan membantu, mungkin karena menambah variasi ukuran dan posisi polip yang dilihat model. Namun geser dan zoom digabung dalam satu skenario, sehingga efek ukuran tidak bisa dipisahkan dari efek posisi. Keterbatasan lain: hanya 3 ulangan, 200 citra latih, model mini, dan peta kesalahan hanya memuat 4 citra dari ujung tersulit dan termudah.
 
+Hipotesis skenario Kecerahan & kontras adalah Dice sama dengan Tanpa augmentasi. Rata-rata Dice-nya 0,484 dibanding 0,575 (selisih 0,091). Selisih ini lebih besar daripada simpangan baku Tanpa augmentasi (0,020) tetapi lebih kecil daripada simpangan baku Kecerahan & kontras sendiri (0,109), sehingga kriteria "lebih kecil dari simpangan baku" tidak bisa dipakai tanpa menyebut simpangan baku yang mana. Ketiga ulangannya (0,615; 0,347; 0,488) tersebar jauh: ulangan pertama lebih tinggi daripada semua ulangan Tanpa augmentasi (maksimum 0,592), sedangkan ulangan kedua jauh di bawahnya. Karena itu hipotesis "sama" tidak bisa dipastikan, dan "merusak" juga tidak. Yang bisa disimpulkan hanya bahwa hasilnya tidak stabil dan butuh lebih banyak ulangan. Alasan dalam hipotesis (variasi kecerahan di 200 citra latih sudah cukup banyak) tidak diuji dalam eksperimen ini, sehingga berstatus dugaan.
+
 Hipotesis kami untuk Hue adalah naik, tetapi hasilnya 0,571 vs 0,575 (selisih 0,004, jauh di bawah simpangan baku 0,029), sehingga pengaruhnya tidak terlihat. Dugaannya, pergeseran hue mengubah warna seluruh citra sekaligus, sehingga perbedaan warna antara polip dan mukosa tetap sama dan tidak ada petunjuk baru yang bisa dipakai model.
 
 
@@ -127,9 +129,10 @@ Catatan: commit Rendi 88bb670, 2ce1fb1, dan cf0f72f tidak tertaut ke akun GitHub
 - Menjelaskan aturan tugas dan alur kerjanya.
 - Memandu pemasangan dan penggunaan Git, GitHub CLI, dan Google Colab, serta menjelaskan pesan *error* di terminal.
 - Untuk hipotesis skenario "Kecerahan & kontras": mengajukan pertanyaan pemandu, mengoreksi konsep (augmentasi ini menambah variasi di data latih, bukan menyeragamkan citra), dan merapikan bahasa jawaban Wangga. Alasan klinis dan arah hipotesis (Dice sama) berasal dari jawaban dan pilihan Wangga sendiri.
+- Untuk Bagian 6, jawaban tentang hipotesis Kecerahan & kontras dikirim ke Claude, yang mengoreksi satu klaim (rata-rata dianggap tidak mewakili satu pun ulangan, padahal ulangan ketiga dekat dengan rata-rata) dan merapikan bahasanya. Isi dan pendapatnya berasal dari Wangga.
 
 **Rendi Prayoga:** memakai Claude (Anthropic) lewat aplikasi desktop Claude. Pemakaiannya: memandu langkah git (memasang git, clone, commit, push), memeriksa konsep alasan klinis dan hipotesis skenario "Hue", dan merapikan bahasanya. Isi hipotesis berasal dari jawaban Rendi sendiri, sedangkan Claude mengoreksi alasan klinis (menyebut variasi yang tepat, yaitu white balance, bukan pencahayaan) dan merapikan kalimat.
-Untuk Bagian 6, draf dugaan tentang Hue dikirim lewat Jonathan ke Claude, yang mengoreksi alasannya (pergeseran hue mengubah warna seluruh citra sekaligus) dan merapikan bahasanya. Dugaan awalnya berasal dari Rendi.
+Untuk Bagian 6, draf dugaan tentang Hue dikirim lewat Claude, yang mengoreksi alasannya (pergeseran hue mengubah warna seluruh citra sekaligus) dan merapikan bahasanya. Dugaan awalnya berasal dari Rendi.
 
 ## Cara menjalankan ulang
 
