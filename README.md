@@ -129,7 +129,7 @@ Catatan: commit Rendi 88bb670, 2ce1fb1, dan cf0f72f tidak tertaut ke akun GitHub
 - Menjelaskan aturan tugas dan alur kerjanya.
 - Memandu pemasangan dan penggunaan Git, GitHub CLI, dan Google Colab, serta menjelaskan pesan *error* di terminal.
 - Untuk hipotesis skenario "Kecerahan & kontras": mengajukan pertanyaan pemandu, mengoreksi konsep (augmentasi ini menambah variasi di data latih, bukan menyeragamkan citra), dan merapikan bahasa jawaban Wangga. Alasan klinis dan arah hipotesis (Dice sama) berasal dari jawaban dan pilihan Wangga sendiri.
-- Untuk Bagian 6, jawaban tentang hipotesis Kecerahan & kontras dikirim ke Claude, yang mengoreksi satu klaim (rata-rata dianggap tidak mewakili satu pun ulangan, padahal ulangan ketiga dekat dengan rata-rata) dan merapikan bahasanya. Isi dan pendapatnya berasal dari Wangga.
+- Untuk Bagian 6, jawaban Wangga tentang hipotesis Kecerahan & kontras dikirim ke Claude, yang mengoreksi satu klaim (rata-rata dianggap tidak mewakili satu pun ulangan, padahal ulangan ketiga dekat dengan rata-rata) dan merapikan bahasanya. Isi dan pendapatnya berasal dari Wangga
 
 **Rendi Prayoga:** memakai Claude (Anthropic) lewat aplikasi desktop Claude. Pemakaiannya: memandu langkah git (memasang git, clone, commit, push), memeriksa konsep alasan klinis dan hipotesis skenario "Hue", dan merapikan bahasanya. Isi hipotesis berasal dari jawaban Rendi sendiri, sedangkan Claude mengoreksi alasan klinis (menyebut variasi yang tepat, yaitu white balance, bukan pencahayaan) dan merapikan kalimat.
 Untuk Bagian 6, draf dugaan tentang Hue dikirim lewat Claude, yang mengoreksi alasannya (pergeseran hue mengubah warna seluruh citra sekaligus) dan merapikan bahasanya. Dugaan awalnya berasal dari Rendi.
